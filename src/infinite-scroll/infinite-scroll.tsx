@@ -15,7 +15,7 @@ interface InfiniteScrollState {
   loadCount: number
 }
 
-class ReactScrolly extends Component<InfiniteScrollProps, InfiniteScrollState> {
+class ReactScrollified extends Component<InfiniteScrollProps, InfiniteScrollState> {
   private loadingRef: HTMLDivElement
   private observer: IntersectionObserver
   private loading: boolean = false
@@ -86,4 +86,4 @@ class ReactScrolly extends Component<InfiniteScrollProps, InfiniteScrollState> {
   }
 }
 
-export default ReactScrolly
+export default ReactScrollified
