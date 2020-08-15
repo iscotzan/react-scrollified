@@ -21,7 +21,7 @@ npm install --save react-scrollified
 | `loadMore` | `function`  | ---     | function used to load more items |
 | `offset`   | `number`    | 0       | starting offset                  |
 
-## Usage
+## Usage Example
 
 ```tsx
 import * as React from 'react'
