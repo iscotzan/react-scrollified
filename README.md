@@ -12,6 +12,15 @@
 npm install --save react-scrollified
 ```
 
+### API - ReactScrollified Props
+
+| Option     | type        | default | Description                      |
+| ---------- | ----------- | ------- | -------------------------------- |
+| `hasMore`  | `boolean`   | ---     | got more to load?                |
+| `loader`   | `ReactNode` | ---     | element to use as loader         |
+| `loadMore` | `function`  | ---     | function used to load more items |
+| `offset`   | `number`    | 0       | starting offset                  |
+
 ## Usage
 
 ```tsx
@@ -62,4 +71,3 @@ export const ExampleComponent = () => {
 ## License
 
 MIT © [iscotzan](https://github.com/iscotzan)
-
