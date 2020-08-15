@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/react-scrollified.svg)](https://www.npmjs.com/package/react-scrollified) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+##### [Demo](https://iscotzan.github.io/react-scrollified/)
+
 ## Install
 
 ```bash
@@ -60,3 +62,4 @@ export const ExampleComponent = () => {
 ## License
 
 MIT © [iscotzan](https://github.com/iscotzan)
+
