@@ -1,7 +1,7 @@
-import ExampleComponent from './index'
+import ReactScrollified from './react-scrollified/react-scrollified'
 
-describe('ExampleComponent', () => {
+describe('ReactScrollified', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(ReactScrollified).toBeTruthy()
   })
 })
