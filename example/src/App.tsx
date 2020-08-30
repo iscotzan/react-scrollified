@@ -1,18 +1,18 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import ReactScrollified from 'react-scrollified'
+// import { ExampleComponent } from 'react-scrollified'
 import 'react-scrollified/dist/index.css'
 
-interface ReactScrollifiedProps {
-  loader: ReactNode
-  hasMore: boolean
-  offset?: number
-  loadMore: (page: number) => void
-}
+// const mode: 'example' | 'live' = 'example'
 
-const App = (props: ReactScrollifiedProps) => {
-  return <ReactScrollified loadMore={props.loadMore} hasMore={props.hasMore} offset={props.offset || 0}
-                           loader={props.loader || <span>Loading...</span>}/>
+const App = () => {
+  // if(mode === 'example'){
+  //  return (<ExampleComponent/>)
+  // }
+  // return  <ExampleComponent/>
+  // @ts-ignore
+  return <ReactScrollified/>
 }
 
 export default App
