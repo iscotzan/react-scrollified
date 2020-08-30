@@ -1,6 +1,6 @@
 # react-scrollified
 
-> Simple React infinite scroll component, utilizing IntersectionObserver 
+> Simple React infinite scroll component, utilizing IntersectionObserver
 
 [![NPM](https://img.shields.io/npm/v/react-scrollified.svg)](https://www.npmjs.com/package/react-scrollified) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -51,8 +51,7 @@ export const ExampleComponent = () => {
   }
 
   return (
-    <div className={styles.test}>
-      <div style={{ minHeight: '800px' }}>
+      <div style={{ height: '800px' }}>
         <ReactScrollified
           hasMore={true}
           loader={loader}
@@ -63,7 +62,6 @@ export const ExampleComponent = () => {
           ))}
         </ReactScrollified>
       </div>
-    </div>
   )
 }
 ```
