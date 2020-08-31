@@ -52,8 +52,9 @@ export const ExampleComponent = () => {
   }
 
   return (
-    <div style={{ height: '800px' }}>
+    <div id="scrolled-div" style={{ height: '800px' }}>
       <ReactScrollified
+        scrolledDiv="scrolled-div"
         hasMore={true}
         loader={loader}
         loadMore={(offset) => loadMore(offset)}
