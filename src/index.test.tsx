@@ -1,4 +1,4 @@
-import ReactScrollified from './react-scrollified/react-scrollified.test'
+import ReactScrollified from './index'
 
 describe('ReactScrollified', () => {
   it('is truthy', () => {

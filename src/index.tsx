@@ -6,6 +6,7 @@ interface ReactScrollifiedProps {
   loader: React.ReactNode
   hasMore: boolean
   offset?: number
+  scrolledDiv?: string
   loadMore: (page: number) => void
   scrollDirection?: 'vertical' | 'horizontal'
   externalListWrapperClassName?: string
@@ -18,8 +19,7 @@ interface ReactScrollifiedState {
   isLoading: boolean
 }
 
-class ReactScrollified extends React.Component<ReactScrollifiedProps,
-  ReactScrollifiedState> {
+class ReactScrollified extends React.Component<ReactScrollifiedProps, ReactScrollifiedState> {
   private isLoading: boolean = false
 
   constructor(props: ReactScrollifiedProps) {
@@ -42,7 +42,7 @@ class ReactScrollified extends React.Component<ReactScrollifiedProps,
   }
 
   handleIntersection(event: any) {
-    console.log(event.isIntersecting, 'current page -> ', this.state.page)
+    // console.log(event.isIntersecting, 'current page -> ', this.state.page)
     if (event.isIntersecting && this.props.hasMore && !this.isLoading) {
       this.isLoading = true
       this.setState(
@@ -57,11 +57,15 @@ class ReactScrollified extends React.Component<ReactScrollifiedProps,
     }
   }
 
+  //    height: 100%;
+  //     max-height: 100%;
+  //     overflow-y: scroll;
   render() {
-    const options = {
-      onChange: this.handleIntersection.bind(this),
-      root: '#rsc-container'
-    }
+    let options: { onChange: any, root?: any } = { onChange: this.handleIntersection.bind(this) }
+    this.props.scrolledDiv ? options.root = '#rsc-container' : null
+    // this.props.scrolledDiv ? options['root'] = this.props.scrolledDiv.charAt(0) === '#' ? this.props.scrolledDiv : '#' + this.props.scrolledDiv : null
+    // console.log('scrolled div?', this.props.scrolledDiv)
+    // console.log('options?', options)
     const containerHeight = '100%' // window.innerHeight
     const className = this.props.externalListWrapperClassName ? this.props.externalListWrapperClassName : 'rsc-container'
     return (
@@ -72,7 +76,7 @@ class ReactScrollified extends React.Component<ReactScrollifiedProps,
           this.props.scrollDirection === 'horizontal'
             ? { overflowX: 'scroll' }
             : {
-              overflowY: 'auto',
+              overflowY: this.props.scrolledDiv ? 'scroll' : 'auto',
               height: containerHeight
             }
         }

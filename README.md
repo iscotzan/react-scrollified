@@ -14,12 +14,13 @@ npm install --save react-scrollified
 
 ### API - ReactScrollified Props
 
-| Option     | type        | default | Description                      |
-| ---------- | ----------- | ------- | -------------------------------- |
-| `hasMore`  | `boolean`   | ---     | got more to load?                |
-| `loader`   | `ReactNode` | ---     | element to use as loader         |
-| `loadMore` | `function`  | ---     | function used to load more items |
-| `offset`   | `number`    | 0       | starting offset                  |
+| Option         | type        | default           | Description                                                                          |
+| -------------- | ----------- | ----------------- | ------------------------------------------------------------------------------------ |
+| `hasMore`      | `boolean`   | ---               | got more to load?                                                                    |
+| `loader`       | `ReactNode` | ---               | element to use as loader                                                             |
+| `loadMore`     | `function`  | ---               | function used to load more items                                                     |
+| `offset?`      | `number`    | 0 (optional)      | starting offset                                                                      |
+| `scrolledDiv?` | `string`    | window (optional) | the scrolled parent div id, !important - must have defined height. default is window |
 
 ## Usage Example
 
@@ -51,17 +52,17 @@ export const ExampleComponent = () => {
   }
 
   return (
-      <div style={{ height: '800px' }}>
-        <ReactScrollified
-          hasMore={true}
-          loader={loader}
-          loadMore={(offset) => loadMore(offset)}
-        >
-          {items.map((item: any, index: any) => (
-            <div key={index}>{item}</div>
-          ))}
-        </ReactScrollified>
-      </div>
+    <div style={{ height: '800px' }}>
+      <ReactScrollified
+        hasMore={true}
+        loader={loader}
+        loadMore={(offset) => loadMore(offset)}
+      >
+        {items.map((item: any, index: any) => (
+          <div key={index}>{item}</div>
+        ))}
+      </ReactScrollified>
+    </div>
   )
 }
 ```

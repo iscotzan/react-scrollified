@@ -1,0 +1,24 @@
+.menu {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  background: whitesmoke;
+  padding: 0.4rem;
+  opacity: 0.918;
+  top: 0;
+}
+.example-button {
+  width: 25rem;
+  background: seashell;
+  cursor: pointer;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  line-height: 15px;
+}
+
+.selected {
+  font-weight: 700;
+  background: lawngreen;
+}
