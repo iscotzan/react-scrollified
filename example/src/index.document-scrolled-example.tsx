@@ -20,7 +20,7 @@ export const DocumentScrolledExampleComponent = () => {
   }, [])
 
   const loadMore = ((page: number) => {
-    const limit = 40
+    const limit = 50
     const offset = page * limit
     console.log('load more', page)
     const newData = range(offset, offset + limit)
@@ -54,7 +54,7 @@ export const DocumentScrolledExampleComponent = () => {
                   justifyContent: 'center',
                   textAlign: 'center',
                   width: '100%'
-                }}>{item}
+                }}>{item + 1}
               </span>
       </div>
     )
@@ -67,7 +67,7 @@ export const DocumentScrolledExampleComponent = () => {
       background: containerBackgroundColor
     }}>
       <ReactScrollified
-        hasMore={items.length < 280}
+        hasMore={items.length < 350}
         loader={loader}
         externalListWrapperClassName={'list-wrapper'}
         loadMore={(page: number) => loadMore(page)}>
