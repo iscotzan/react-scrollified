@@ -54,7 +54,7 @@ export const ExampleComponent = () => {
                   justifyContent: 'center',
                   textAlign: 'center',
                   width: '100%'
-                }}>{item}
+                }}>{item + 1}
               </span>
       </div>
     )
