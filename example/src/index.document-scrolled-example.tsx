@@ -67,7 +67,7 @@ export const DocumentScrolledExampleComponent = () => {
       background: containerBackgroundColor
     }}>
       <ReactScrollified
-        hasMore={true}
+        hasMore={items.length < 280}
         loader={loader}
         externalListWrapperClassName={'list-wrapper'}
         loadMore={(page: number) => loadMore(page)}>

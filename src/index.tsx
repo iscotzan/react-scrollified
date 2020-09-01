@@ -83,7 +83,10 @@ class ReactScrollified extends React.Component<ReactScrollifiedProps, ReactScrol
       >
         {this.props.children}
         <Observer {...options}>
-          <div className='rsc-loader-wrapper'>{this.props.loader}</div>
+          {this.props.hasMore ?
+            <div className='rsc-loader-wrapper'>{this.props.loader}</div>
+            : null
+          }
         </Observer>
       </div>
     )

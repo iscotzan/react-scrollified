@@ -14,6 +14,7 @@ const App = () => {
     return (
       <div>
         <div className="menu">
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}><a href="https://github.com/iscotzan/react-scrollified">GitHub</a></div>
           <button className={currentExample === 'doc' ? 'example-button selected' : 'example-button'}
                   onClick={() => currentExampleSelected('doc')}>Document as root example
           </button>

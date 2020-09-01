@@ -1,6 +1,6 @@
 {
   "name": "react-scrollified",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "description": "Simple &amp; Working React infinite scroll component, utilizing intersection observer",
   "author": "iscotzan",
   "license": "MIT",
